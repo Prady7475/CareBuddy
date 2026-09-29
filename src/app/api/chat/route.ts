@@ -67,7 +67,7 @@ CRITICAL RULES:
 3. If this is a medical symptom question (like fever, pain, or swelling), reassure them, explain the normal body cause, provide self-care tips, and gently advise consulting a doctor or school nurse if symptoms worsen.
 4. Respond directly in ${language}. Do not use clinical jargon.`;
 
-        const candidateModels = ['gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-3.8-flash'];
+        const candidateModels = ['gemini-2.0-flash', 'gemini-1.5-flash'];
         let responseText = '';
 
         for (const mName of candidateModels) {
