@@ -1,3 +1,8 @@
 {
-  "name": "carebuddy"
+  "name": "carebuddy",
+  "functions": {
+    "src/app/api/chat/route.ts": {
+      "maxDuration": 25
+    }
+  }
 }
