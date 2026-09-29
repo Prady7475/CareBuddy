@@ -296,12 +296,12 @@ export default function CareBuddyApp() {
   }[profile.language];
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col justify-between font-sans selection:bg-teal-500 selection:text-slate-950 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#060a18] text-slate-100 flex flex-col justify-between font-sans selection:bg-blue-500 selection:text-white relative overflow-x-hidden">
       
       {/* Dynamic Glowing Ambient Mesh Orbs */}
-      <div className="fixed top-[-10%] left-[-10%] w-[45vw] h-[45vw] rounded-full bg-teal-500/10 blur-[120px] pointer-events-none animate-float" />
-      <div className="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-emerald-500/10 blur-[140px] pointer-events-none animate-float [animation-delay:3s]" />
-      <div className="fixed top-[40%] right-[15%] w-[30vw] h-[30vw] rounded-full bg-indigo-500/5 blur-[100px] pointer-events-none animate-float [animation-delay:1.5s]" />
+      <div className="fixed top-[-10%] left-[-10%] w-[45vw] h-[45vw] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none animate-float" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-indigo-500/10 blur-[140px] pointer-events-none animate-float [animation-delay:3s]" />
+      <div className="fixed top-[40%] right-[15%] w-[30vw] h-[30vw] rounded-full bg-violet-500/5 blur-[100px] pointer-events-none animate-float [animation-delay:1.5s]" />
 
       {/* ----------------- HEADER BAR ----------------- */}
       <header className="sticky top-0 z-30 glass-panel border-b border-slate-800/80 px-4 py-3 shadow-xl">
@@ -310,11 +310,11 @@ export default function CareBuddyApp() {
           {/* Logo & Online Status */}
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-teal-400 via-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/25 text-slate-950 font-bold transform hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 via-blue-400 to-indigo-400 flex items-center justify-center shadow-lg shadow-blue-500/25 text-slate-950 font-bold transform hover:scale-105 transition-transform">
                 <Heart className="w-5 h-5 fill-slate-950 stroke-none" />
               </div>
-              <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-950 rounded-full animate-ping" />
-              <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-950 rounded-full" />
+              <span className="absolute bottom-0 right-0 w-3 h-3 bg-indigo-400 border-2 border-slate-950 rounded-full animate-ping" />
+              <span className="absolute bottom-0 right-0 w-3 h-3 bg-indigo-400 border-2 border-slate-950 rounded-full" />
             </div>
 
             <div>
@@ -322,8 +322,8 @@ export default function CareBuddyApp() {
                 <h1 className="font-black text-lg sm:text-xl text-slate-100 tracking-tight leading-none bg-gradient-to-r from-slate-100 via-teal-100 to-slate-300 bg-clip-text text-transparent">
                   {uiText.appName}
                 </h1>
-                <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/10 text-teal-400 border border-teal-500/25">
-                  <Shield className="w-3 h-3 text-teal-400" />
+                <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-400 border border-blue-500/25">
+                  <Shield className="w-3 h-3 text-blue-400" />
                   {profile.onboarded
                     ? `Age ${profile.ageGroup} · ${profile.focusArea === 'boys' ? 'Boys' : profile.focusArea === 'girls' ? 'Girls' : 'General'}`
                     : 'Ages 13–18'}
@@ -346,7 +346,7 @@ export default function CareBuddyApp() {
                   onClick={() => handleLanguageChange(lang)}
                   className={`px-2.5 py-1 text-xs font-bold rounded-xl transition-all ${
                     profile.language === lang 
-                      ? 'bg-gradient-to-r from-teal-500 to-emerald-400 text-slate-950 shadow-md transform scale-105' 
+                      ? 'bg-gradient-to-r from-blue-600 to-blue-400 text-slate-950 shadow-md transform scale-105' 
                       : 'text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -358,7 +358,7 @@ export default function CareBuddyApp() {
             {/* Content Policy & Sources Button */}
             <button
               onClick={() => setShowPolicyModal(true)}
-              className="p-2 text-slate-400 hover:text-teal-400 hover:bg-slate-800/80 rounded-xl transition-all border border-transparent hover:border-slate-700/60"
+              className="p-2 text-slate-400 hover:text-blue-400 hover:bg-slate-800/80 rounded-xl transition-all border border-transparent hover:border-slate-700/60"
               title={uiText.policyBtn}
             >
               <BookOpen className="w-5 h-5" />
@@ -393,18 +393,18 @@ export default function CareBuddyApp() {
           <div className="max-w-lg w-full glass-panel border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
             
             {/* Glow background accent */}
-            <div className="absolute -top-20 -right-20 w-44 h-44 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -left-20 w-44 h-44 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-20 -right-20 w-44 h-44 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-44 h-44 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
 
             {/* Progress Header */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center shadow-inner">
+                <div className="w-8 h-8 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shadow-inner">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <h2 className="text-lg font-black text-slate-100">Welcome to CareBuddy</h2>
               </div>
-              <span className="text-xs font-bold px-3 py-1 bg-slate-800 text-teal-300 rounded-full border border-teal-500/30">
+              <span className="text-xs font-bold px-3 py-1 bg-slate-800 text-blue-300 rounded-full border border-blue-500/30">
                 Step {onboardingStep} of 3
               </span>
             </div>
@@ -412,7 +412,7 @@ export default function CareBuddyApp() {
             {/* Progress Bar */}
             <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mb-6">
               <div 
-                className="bg-gradient-to-r from-teal-400 to-emerald-400 h-full transition-all duration-500 ease-out" 
+                className="bg-gradient-to-r from-blue-500 to-indigo-400 h-full transition-all duration-500 ease-out" 
                 style={{ width: `${(onboardingStep / 3) * 100}%` }}
               />
             </div>
@@ -421,7 +421,7 @@ export default function CareBuddyApp() {
             {onboardingStep === 1 && (
               <div className="space-y-4 animate-slide-up">
                 <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-teal-400" />
+                  <Globe className="w-4 h-4 text-blue-400" />
                   Select your language:
                 </h3>
                 <p className="text-xs text-slate-400">
@@ -439,7 +439,7 @@ export default function CareBuddyApp() {
                       onClick={() => setProfile(p => ({ ...p, language: item.id as Language }))}
                       className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all transform hover:scale-[1.01] ${
                         profile.language === item.id
-                          ? 'border-teal-400 bg-teal-500/15 text-teal-200 font-bold shadow-lg shadow-teal-500/10'
+                          ? 'border-blue-400 bg-blue-500/15 text-blue-200 font-bold shadow-lg shadow-blue-500/10'
                           : 'border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300'
                       }`}
                     >
@@ -448,7 +448,7 @@ export default function CareBuddyApp() {
                         <div className="text-xs text-slate-400 font-normal mt-0.5">{item.desc}</div>
                       </div>
                       {profile.language === item.id && (
-                        <div className="w-6 h-6 rounded-full bg-teal-400 text-slate-950 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded-full bg-blue-400 text-slate-950 flex items-center justify-center">
                           <Check className="w-4 h-4 stroke-[3]" />
                         </div>
                       )}
@@ -458,7 +458,7 @@ export default function CareBuddyApp() {
 
                 <button
                   onClick={() => setOnboardingStep(2)}
-                  className="w-full mt-6 py-3.5 bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-teal-500/20 hover:opacity-95 transform hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
+                  className="w-full mt-6 py-3.5 bg-gradient-to-r from-blue-500 to-indigo-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-blue-500/20 hover:opacity-95 transform hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
                 >
                   <span>Continue</span>
                   <ArrowRight className="w-4 h-4" />
@@ -471,7 +471,7 @@ export default function CareBuddyApp() {
               <div className="space-y-4 animate-slide-up">
                 <div>
                   <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
-                    <UserCheck className="w-4 h-4 text-teal-400" />
+                    <UserCheck className="w-4 h-4 text-blue-400" />
                     Select your Age (Years):
                   </h3>
                   <p className="text-xs text-slate-400 mt-1">
@@ -490,7 +490,7 @@ export default function CareBuddyApp() {
                       onClick={() => setProfile(p => ({ ...p, ageGroup: item.id as AgeGroup }))}
                       className={`p-4 sm:p-5 rounded-2xl border text-center transition-all transform hover:scale-[1.02] flex flex-col justify-center items-center ${
                         profile.ageGroup === item.id
-                          ? 'border-teal-400 bg-teal-500/15 text-teal-200 font-bold shadow-lg shadow-teal-500/10'
+                          ? 'border-blue-400 bg-blue-500/15 text-blue-200 font-bold shadow-lg shadow-blue-500/10'
                           : 'border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300'
                       }`}
                     >
@@ -509,7 +509,7 @@ export default function CareBuddyApp() {
                   </button>
                   <button
                     onClick={() => setOnboardingStep(3)}
-                    className="w-2/3 py-3.5 bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-teal-500/20 hover:opacity-95 flex items-center justify-center gap-2 transition-all"
+                    className="w-2/3 py-3.5 bg-gradient-to-r from-blue-500 to-indigo-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-blue-500/20 hover:opacity-95 flex items-center justify-center gap-2 transition-all"
                   >
                     <span>Next</span>
                     <ArrowRight className="w-4 h-4" />
@@ -522,7 +522,7 @@ export default function CareBuddyApp() {
             {onboardingStep === 3 && (
               <div className="space-y-4 animate-slide-up">
                 <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-teal-400" />
+                  <Sparkles className="w-4 h-4 text-blue-400" />
                   Select primary focus area:
                 </h3>
                 <p className="text-xs text-slate-400">
@@ -539,7 +539,7 @@ export default function CareBuddyApp() {
                       onClick={() => setProfile(p => ({ ...p, focusArea: item.id as FocusArea }))}
                       className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all transform hover:scale-[1.01] ${
                         profile.focusArea === item.id
-                          ? 'border-teal-400 bg-teal-500/15 text-teal-200 font-bold shadow-lg shadow-teal-500/10'
+                          ? 'border-blue-400 bg-blue-500/15 text-blue-200 font-bold shadow-lg shadow-blue-500/10'
                           : 'border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300'
                       }`}
                     >
@@ -548,7 +548,7 @@ export default function CareBuddyApp() {
                         <div className="text-xs text-slate-400 font-normal mt-0.5">{item.desc}</div>
                       </div>
                       {profile.focusArea === item.id && (
-                        <div className="w-6 h-6 rounded-full bg-teal-400 text-slate-950 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded-full bg-blue-400 text-slate-950 flex items-center justify-center">
                           <Check className="w-4 h-4 stroke-[3]" />
                         </div>
                       )}
@@ -565,7 +565,7 @@ export default function CareBuddyApp() {
                   </button>
                   <button
                     onClick={handleCompleteOnboarding}
-                    className="w-2/3 py-3.5 bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-teal-500/20 hover:opacity-95 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                    className="w-2/3 py-3.5 bg-gradient-to-r from-blue-500 to-indigo-400 text-slate-950 font-extrabold rounded-2xl shadow-xl shadow-blue-500/20 hover:opacity-95 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
                   >
                     <span>Start Private Session</span>
                     <Lock className="w-4 h-4" />
@@ -575,7 +575,7 @@ export default function CareBuddyApp() {
             )}
 
             <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-center gap-1.5 text-[11px] text-slate-400 font-medium">
-              <Lock className="w-3.5 h-3.5 text-teal-400" />
+              <Lock className="w-3.5 h-3.5 text-blue-400" />
               <span>No sign-up, no login, zero tracking history.</span>
             </div>
 
@@ -589,12 +589,12 @@ export default function CareBuddyApp() {
         {/* Safe Privacy Notice Ribbon */}
         <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800/90 rounded-2xl px-4 py-2 flex items-center justify-between gap-2 text-xs text-slate-300 shadow-sm">
           <div className="flex items-center gap-2">
-            <Lock className="w-3.5 h-3.5 text-teal-400 flex-shrink-0" />
+            <Lock className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
             <span className="truncate font-medium">{uiText.discreetNote}</span>
           </div>
           <button 
             onClick={() => setShowPolicyModal(true)} 
-            className="text-teal-400 hover:text-teal-300 flex items-center gap-1 flex-shrink-0 font-bold transition-colors"
+            className="text-blue-400 hover:text-blue-300 flex items-center gap-1 flex-shrink-0 font-bold transition-colors"
           >
             <Info className="w-3.5 h-3.5" />
             <span>Info</span>
@@ -612,14 +612,14 @@ export default function CareBuddyApp() {
                 className={`flex gap-3 animate-slide-up ${isUser ? 'justify-end' : 'justify-start'}`}
               >
                 {!isUser && (
-                  <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-teal-400 to-emerald-400 flex items-center justify-center text-slate-950 font-bold flex-shrink-0 shadow-lg shadow-teal-500/20 transform hover:scale-105 transition-transform">
+                  <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-indigo-400 flex items-center justify-center text-slate-950 font-bold flex-shrink-0 shadow-lg shadow-blue-500/20 transform hover:scale-105 transition-transform">
                     <Bot className="w-5 h-5" />
                   </div>
                 )}
 
                 <div className={`max-w-[88%] sm:max-w-[80%] rounded-3xl p-4 sm:p-5 shadow-xl border transition-all ${
                   isUser
-                    ? 'bg-gradient-to-r from-teal-600 via-teal-500 to-emerald-600 text-white rounded-br-none border-teal-400/40 shadow-teal-600/20'
+                    ? 'bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white rounded-br-none border-blue-400/40 shadow-blue-600/20'
                     : msg.isCrisis
                     ? 'bg-rose-950/90 text-rose-100 rounded-bl-none border-rose-500/60 shadow-rose-900/30 animate-pulse-glow'
                     : 'glass-panel text-slate-100 rounded-bl-none border-slate-700/60'
@@ -635,13 +635,13 @@ export default function CareBuddyApp() {
                             {uiText.crisisBadge}
                           </span>
                         ) : msg.source === 'gemini' ? (
-                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/15 text-teal-300 border border-teal-500/30">
-                            <Sparkles className="w-3 h-3 text-teal-400" />
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/15 text-blue-300 border border-blue-500/30">
+                            <Sparkles className="w-3 h-3 text-blue-400" />
                             {uiText.geminiBadge}
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                            <ShieldCheck className="w-3 h-3 text-emerald-400" />
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                            <ShieldCheck className="w-3 h-3 text-indigo-400" />
                             {uiText.localBadge}
                           </span>
                         )}
@@ -698,9 +698,9 @@ export default function CareBuddyApp() {
                     <div className="mt-3.5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
                       <button
                         onClick={() => setSelectedQAForDetails(msg.matchedQA || null)}
-                        className="text-teal-400 hover:text-teal-300 font-bold flex items-center gap-1.5 transition-colors group"
+                        className="text-blue-400 hover:text-blue-300 font-bold flex items-center gap-1.5 transition-colors group"
                       >
-                        <BookOpen className="w-3.5 h-3.5 text-teal-400 group-hover:rotate-12 transition-transform" />
+                        <BookOpen className="w-3.5 h-3.5 text-blue-400 group-hover:rotate-12 transition-transform" />
                         <span className="underline underline-offset-2">{uiText.viewDetails}</span>
                       </button>
                       <span className="text-[10px] text-slate-400 font-medium truncate max-w-[180px]">
@@ -717,14 +717,14 @@ export default function CareBuddyApp() {
           {/* Animated Typing Wave Indicator */}
           {isLoading && (
             <div className="flex gap-3 justify-start animate-slide-up">
-              <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-teal-400 to-emerald-400 flex items-center justify-center text-slate-950 font-bold animate-pulse shadow-lg">
+              <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-indigo-400 flex items-center justify-center text-slate-950 font-bold animate-pulse shadow-lg">
                 <Bot className="w-5 h-5" />
               </div>
               <div className="glass-panel border border-slate-700/60 rounded-3xl rounded-bl-none p-4 flex items-center gap-3 text-slate-300 text-sm">
                 <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-teal-400 animate-wave-1" />
-                  <div className="w-2 h-2 rounded-full bg-teal-400 animate-wave-2" />
-                  <div className="w-2 h-2 rounded-full bg-teal-400 animate-wave-3" />
+                  <div className="w-2 h-2 rounded-full bg-blue-400 animate-wave-1" />
+                  <div className="w-2 h-2 rounded-full bg-blue-400 animate-wave-2" />
+                  <div className="w-2 h-2 rounded-full bg-blue-400 animate-wave-3" />
                 </div>
                 <span className="text-xs font-semibold text-slate-300">Searching health bank...</span>
               </div>
@@ -743,7 +743,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('all')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'all'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -753,7 +753,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('puberty_female')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'puberty_female' || selectedCategory === 'puberty_male'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -763,7 +763,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('hygiene')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'hygiene'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -773,7 +773,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('skin_hair')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'skin_hair'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -783,7 +783,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('nutrition_sleep')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'nutrition_sleep'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -793,7 +793,7 @@ export default function CareBuddyApp() {
               onClick={() => setSelectedCategory('emotional')}
               className={`px-3 py-1.5 rounded-xl font-bold transition-all flex-shrink-0 ${
                 selectedCategory === 'emotional'
-                  ? 'bg-teal-500 text-slate-950 shadow-md'
+                  ? 'bg-blue-500 text-slate-950 shadow-md'
                   : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800'
               }`}
             >
@@ -809,7 +809,7 @@ export default function CareBuddyApp() {
                 <button
                   key={item.id}
                   onClick={() => handleSendQuery(qText)}
-                  className="flex-shrink-0 px-3.5 py-2.5 bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-teal-500/60 text-slate-200 hover:text-teal-300 text-xs font-medium rounded-2xl transition-all shadow-md text-left max-w-[320px] truncate transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex-shrink-0 px-3.5 py-2.5 bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-blue-500/60 text-slate-200 hover:text-blue-300 text-xs font-medium rounded-2xl transition-all shadow-md text-left max-w-[320px] truncate transform hover:scale-[1.02] active:scale-[0.98]"
                   title={qText}
                 >
                   💬 {qText}
@@ -838,7 +838,7 @@ export default function CareBuddyApp() {
             disabled={!inputQuery.trim() || isLoading}
             className={`p-3.5 rounded-2xl font-black transition-all flex items-center justify-center transform active:scale-95 ${
               inputQuery.trim() && !isLoading
-                ? 'bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 shadow-lg shadow-teal-500/25 hover:opacity-95 hover:scale-105'
+                ? 'bg-gradient-to-r from-blue-500 to-indigo-400 text-slate-950 shadow-lg shadow-blue-500/25 hover:opacity-95 hover:scale-105'
                 : 'bg-slate-800/80 text-slate-600 cursor-not-allowed'
             }`}
           >
@@ -854,8 +854,8 @@ export default function CareBuddyApp() {
           <div className="max-w-lg w-full glass-panel border border-slate-700 rounded-3xl p-6 shadow-2xl space-y-4 max-h-[85vh] overflow-y-auto">
             
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <div className="flex items-center gap-2 text-teal-400">
-                <BookOpen className="w-5 h-5 text-teal-400" />
+              <div className="flex items-center gap-2 text-blue-400">
+                <BookOpen className="w-5 h-5 text-blue-400" />
                 <h3 className="font-extrabold text-base text-slate-100">Vetted Medical Grounding Facts</h3>
               </div>
               <button
@@ -890,7 +890,7 @@ export default function CareBuddyApp() {
 
               <div>
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Medical Authorities & References:</label>
-                <ul className="mt-1 list-disc list-inside text-xs text-teal-300 font-semibold space-y-1">
+                <ul className="mt-1 list-disc list-inside text-xs text-blue-300 font-semibold space-y-1">
                   {selectedQAForDetails.sources.map((src, i) => (
                     <li key={i}>{src}</li>
                   ))}
@@ -901,7 +901,7 @@ export default function CareBuddyApp() {
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Search Keywords / Tanglish Tags:</label>
                 <div className="flex flex-wrap gap-1.5 mt-1.5">
                   {selectedQAForDetails.tags.map((tag, idx) => (
-                    <span key={idx} className="px-2.5 py-1 bg-slate-800/80 text-teal-300 text-xs rounded-xl border border-slate-700 font-mono">
+                    <span key={idx} className="px-2.5 py-1 bg-slate-800/80 text-blue-300 text-xs rounded-xl border border-slate-700 font-mono">
                       #{tag}
                     </span>
                   ))}
@@ -926,8 +926,8 @@ export default function CareBuddyApp() {
           <div className="max-w-xl w-full glass-panel border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
             
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <div className="flex items-center gap-2.5 text-teal-400">
-                <ShieldCheck className="w-6 h-6 text-teal-400" />
+              <div className="flex items-center gap-2.5 text-blue-400">
+                <ShieldCheck className="w-6 h-6 text-blue-400" />
                 <h3 className="font-extrabold text-lg text-slate-100">
                   {CONTENT_POLICY.title[profile.language] || CONTENT_POLICY.title.en}
                 </h3>
@@ -941,8 +941,8 @@ export default function CareBuddyApp() {
             </div>
 
             <div className="space-y-4 text-xs sm:text-sm">
-              <div className="p-4 bg-teal-500/10 border border-teal-500/25 rounded-2xl text-teal-200 leading-relaxed">
-                <h4 className="font-black text-xs uppercase tracking-wider mb-1 text-teal-400">Educational Purpose</h4>
+              <div className="p-4 bg-blue-500/10 border border-blue-500/25 rounded-2xl text-blue-200 leading-relaxed">
+                <h4 className="font-black text-xs uppercase tracking-wider mb-1 text-blue-400">Educational Purpose</h4>
                 <p>{CONTENT_POLICY.educationalPurpose[profile.language] || CONTENT_POLICY.educationalPurpose.en}</p>
               </div>
 
@@ -968,19 +968,19 @@ export default function CareBuddyApp() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div className="p-3 bg-slate-950/80 rounded-2xl border border-slate-800">
                     <span className="text-slate-400 font-medium">Tele-MANAS (Govt):</span>
-                    <span className="font-mono text-teal-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.telemanas}</span>
+                    <span className="font-mono text-blue-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.telemanas}</span>
                   </div>
                   <div className="p-3 bg-slate-950/80 rounded-2xl border border-slate-800">
                     <span className="text-slate-400 font-medium">KIRAN Helpline:</span>
-                    <span className="font-mono text-teal-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.kiran}</span>
+                    <span className="font-mono text-blue-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.kiran}</span>
                   </div>
                   <div className="p-3 bg-slate-950/80 rounded-2xl border border-slate-800">
                     <span className="text-slate-400 font-medium">Childline India:</span>
-                    <span className="font-mono text-teal-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.childline}</span>
+                    <span className="font-mono text-blue-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.childline}</span>
                   </div>
                   <div className="p-3 bg-slate-950/80 rounded-2xl border border-slate-800">
                     <span className="text-slate-400 font-medium">Sneha (Tamil Nadu):</span>
-                    <span className="font-mono text-teal-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.sneha}</span>
+                    <span className="font-mono text-blue-300 font-bold block mt-0.5">{CONTENT_POLICY.helplines.sneha}</span>
                   </div>
                 </div>
               </div>
@@ -988,7 +988,7 @@ export default function CareBuddyApp() {
 
             <button
               onClick={() => setShowPolicyModal(false)}
-              className="w-full py-3.5 bg-gradient-to-r from-teal-400 to-emerald-400 hover:opacity-95 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-teal-500/20"
+              className="w-full py-3.5 bg-gradient-to-r from-blue-500 to-indigo-400 hover:opacity-95 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-blue-500/20"
             >
               I Understand & Agree
             </button>
@@ -997,7 +997,7 @@ export default function CareBuddyApp() {
       )}
 
       {/* Footer */}
-      <footer className="py-2.5 text-center text-[11px] text-slate-500 border-t border-slate-900 bg-[#070b14]/90 backdrop-blur-md z-10">
+      <footer className="py-2.5 text-center text-[11px] text-slate-500 border-t border-slate-900 bg-[#060a18]/90 backdrop-blur-md z-10">
         <p>CareBuddy Adolescent Health Guide • Confidential Educational Application</p>
       </footer>
     </div>
