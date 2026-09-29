@@ -106,10 +106,18 @@ export default function CareBuddyApp() {
     window.location.href = 'https://www.google.com';
   };
 
-  // Reset Chat
+  // Reset — go back to onboarding so user can change language, age, or focus area
   const handleResetChat = () => {
-    initWelcomeMessage(profile.language, profile.focusArea);
+    setProfile({
+      language: 'en',
+      ageGroup: '15-16',
+      focusArea: 'general',
+      onboarded: false,
+    });
+    setOnboardingStep(1);
+    setMessages([]);
     setInputQuery('');
+    setSelectedCategory('all');
   };
 
   // Handle Language Change on the fly
