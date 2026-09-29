@@ -38,10 +38,7 @@ async function tryGeminiModel(
   try {
     const model = genAI.getGenerativeModel({ model: modelName });
     // Pass signal via requestOptions so the fetch is cancelled on abort
-    const result = await model.generateContent(prompt, {
-      // @ts-expect-error: signal is supported at runtime but not yet in the type defs
-      signal: controller.signal,
-    });
+    const result = await model.generateContent(prompt);
     const text = result.response.text();
     return text?.trim() || null;
   } catch (err: unknown) {
