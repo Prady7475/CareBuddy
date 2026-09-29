@@ -997,8 +997,12 @@ export default function CareBuddyApp() {
       )}
 
       {/* Footer */}
-      <footer className="py-2.5 text-center text-[11px] text-slate-500 border-t border-slate-900 bg-[#060a18]/90 backdrop-blur-md z-10">
+      <footer className="py-3 text-center text-[11px] text-slate-500 border-t border-slate-900 bg-[#060a18]/90 backdrop-blur-md z-10 space-y-0.5">
         <p>CareBuddy Adolescent Health Guide • Confidential Educational Application</p>
+        <p className="text-slate-600">
+          Crafted with <span className="text-blue-500">♥</span> by{' '}
+          <span className="text-slate-400 font-semibold">Lekha Sri</span>
+        </p>
       </footer>
     </div>
   );
