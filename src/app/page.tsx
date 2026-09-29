@@ -324,7 +324,9 @@ export default function CareBuddyApp() {
                 </h1>
                 <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/10 text-teal-400 border border-teal-500/25">
                   <Shield className="w-3 h-3 text-teal-400" />
-                  Ages 13–18
+                  {profile.onboarded
+                    ? `Age ${profile.ageGroup} · ${profile.focusArea === 'boys' ? 'Boys' : profile.focusArea === 'girls' ? 'Girls' : 'General'}`
+                    : 'Ages 13–18'}
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 hidden xs:block font-medium mt-0.5">
